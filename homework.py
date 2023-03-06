@@ -134,7 +134,7 @@ def read_package(workout_type: str, data: list) -> Training:
         training_object = training_dict[workout_type](*data)
         return training_object
     else:
-        raise ('Тренировка не найдена')
+        raise ValueError('Тренировка не найдена')
 
 
 def main(training: Training) -> None:
